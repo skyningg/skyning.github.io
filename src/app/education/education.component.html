@@ -1,0 +1,41 @@
+<h3>Educación</h3>
+
+<table border="0">
+  <!-- Itera sobre la lista de educación -->
+  <ul *ngFor="let edu of educationList">
+    <li>
+      <tr>
+        <!-- Muestra la fecha de estudio y la ubicación -->
+        <td>{{ edu.fecha }} </td>
+        <td> {{ edu.ubicacion }} </td>
+      </tr>
+      <tr>
+        <!-- Muestra el grado de estudio -->
+        <td>{{ edu.grado }} </td>
+        <td></td>
+      </tr>
+      <tr>
+        <!-- Muestra la institución educativa -->
+        <td>{{ edu.institucion }} </td>
+        <td></td>
+      </tr>
+      <tr>
+        <!-- Muestra el campo de estudio -->
+        <td>{{ edu.campoEstudio }} </td>
+        <td></td>
+      </tr>
+      <tr>
+        <!-- Encabezado para la lista de logros -->
+        <td>Logros</td>
+      </tr>
+      <!-- Itera sobre la lista de logros de cada educación -->
+      <ul *ngFor="let logro of edu.logros">
+        <li>
+          <tr>
+            <td>{{ logro.descripcion }} </td>
+          </tr>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</table>
