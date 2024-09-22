@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,24 +6,29 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './education.component.html',
-  styleUrls: ['./education.component.css']
+  styleUrls: ['./education.component.css'],
 })
-export class EducationComponent {
-  educationList: Array<any> = [];
+export class EducationComponent implements OnInit {
+  educationHistory: Array<{
+    fecha: string;
+    titulo: string;
+    institucion: string;
+  }> = []; // Eliminado logros
 
   ngOnInit(): void {
-    let education = {
-      fecha: "2022-2026",
-      institucion: "Universidad Veracruzana",
-      ubicacion: "Ixtaczoquitlán, Ver.",
-      grado: "Licenciatura",
-      campoEstudio: "Ingeniería de Software",
-      logros: [
-        { descripcion: "Estudiante de Ingeniería de software" }
-      ]
+    const education1 = {
+      fecha: '2019-2022',
+      titulo: 'Técnico en programacion',
+      institucion: 'Centro de Bachilleratos Técnico Industrial y de Servicios no.142',
     };
 
-    this.educationList.push(education);
-    console.log(this.educationList); // Asegúrate de imprimir la lista correcta
+    const education2 = {
+      fecha: '2022-Actualidad',
+      titulo: 'Licenciatura en Ingeniería de Software',
+      institucion: 'Universidad Veracruzana',
+    };
+
+    this.educationHistory.push(education1, education2);
+    console.log(this.educationHistory);
   }
 }
