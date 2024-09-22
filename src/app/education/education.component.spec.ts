@@ -1,23 +1,34 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-import { EducationComponent } from './education.component';
+@Component({
+  selector: 'app-education',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './education.component.html',
+  styleUrls: ['./education.component.css'],
+})
+export class EducationComponent implements OnInit {
+  educationHistory: Array<{ 
+    fecha: string; 
+    titulo: string; 
+    institucion: string; 
+  }> = []; // Eliminado logros
 
-describe('EducationComponent', () => {
-  let component: EducationComponent;
-  let fixture: ComponentFixture<EducationComponent>;
+  ngOnInit(): void {
+    const education1 = {
+      fecha: '2019-2022',
+      titulo: 'Técnico en programacion',
+      institucion: 'Centro de Bachilleratos Técnico Industrial y de Servicios no.142',
+    };
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [EducationComponent]
-    })
-    .compileComponents();
+    const education2 = {
+      fecha: '2022-Actualidad',
+      titulo: 'Licenciatura en Ingeniería de Software',
+      institucion: 'Universidad Veracruzana',
+    };
 
-    fixture = TestBed.createComponent(EducationComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    this.educationHistory.push(education1, education2);
+    console.log(this.educationHistory);
+  }
+}

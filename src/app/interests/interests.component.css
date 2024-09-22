@@ -8,7 +8,7 @@
 
 /* Estilo general del cuerpo */
 body {
-    background-color: #0a0f25; /* Fondo oscuro espacial */
+    background-color: #0a0f25; /* Fondo oscuro espacial, mantenido */
     color: #e0e0e0; /* Texto claro para contraste */
     font-family: 'Roboto', sans-serif; /* Fuente moderna y limpia */
     margin: 0;
@@ -34,7 +34,7 @@ table {
     width: 90%;
     max-width: 1000px;
     border-collapse: collapse;
-    background-color: #111a40; /* Azul más oscuro para contraste */
+    background-color: #163824; /* Verde oscuro para contraste */
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Sombra sutil */
     padding: 20px;
@@ -70,7 +70,7 @@ ul li:before {
 
 /* Estilo del hover en la lista */
 ul li:hover {
-    color: #66ff99; /* Verde brillante en hover */
+    color: #ff66b3; /* Hover en rosa brillante */
     cursor: pointer;
 }
 
