@@ -47,7 +47,7 @@ export class AchievementsComponents {
 
     let achievement7 = {
       name: 'Volunteering Excellence Award',
-      description: 'Recognized for outstanding contributions to a community education program, with over 100 hours of service.',
+ 
     };
 
     this.Achievements.push(achievement1, achievement2, achievement3, achievement4, achievement5, achievement6, achievement7);
